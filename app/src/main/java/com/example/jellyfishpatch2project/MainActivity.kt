@@ -24,7 +24,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.appBarMain.toolbar)
+        try {
+            setSupportActionBar(binding.appBarMain.toolbar)
+        } catch (e: Exception) {
+            TODO("Not yet implemented")
+        } finally {
+        }
 
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
